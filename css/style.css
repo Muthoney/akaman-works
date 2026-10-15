@@ -1,0 +1,978 @@
+
+/* ==================================
+   AKAMAN WORKS
+   Premium Cocoa Brown & Black Theme
+================================== */
+
+:root {
+  --color-black: #0a0a0a;
+  --color-dark: #15110f;
+  --color-brown: #38251d;
+  --color-cocoa: #5a3b2e;
+  --color-beige: #d7c2a5;
+  --color-gold: #c8a87c;
+  --color-cream: #f3ece3;
+  --color-white: #ffffff;
+  --color-text: #c9bfb5;
+  --color-border: rgba(200, 168, 124, 0.22);
+
+  --color-background: var(--color-black);
+  --color-accent: var(--color-gold);
+
+  --radius: 4px;
+  --transition: 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: var(--color-black);
+  color: var(--color-text);
+  line-height: 1.8;
+}
+
+a {
+  color: var(--color-beige);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--color-gold);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-cream);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: clamp(2.7rem, 6vw, 5rem);
+  letter-spacing: -1.5px;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+}
+
+p {
+  margin-bottom: 18px;
+}
+
+/* NAVIGATION */
+
+.site-header {
+  min-height: 82px;
+  padding: 20px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  background: var(--color-black);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.logo {
+  color: var(--color-cream);
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.logo span {
+  color: var(--color-gold);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 26px;
+}
+
+.navbar a {
+  color: #d5ccc2;
+  font-size: 0.88rem;
+  letter-spacing: 0.5px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--color-gold);
+}
+
+/* HOME HERO */
+
+.hero {
+  min-height: 620px;
+  padding: 110px 7%;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(
+      ellipse at 85% 35%,
+      rgba(90, 59, 46, 0.35),
+      transparent 45%
+    ),
+    linear-gradient(
+      120deg,
+      #0a0a0a 30%,
+      #1d1511 100%
+    );
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero-content {
+  max-width: 780px;
+}
+
+.eyebrow {
+  color: var(--color-gold);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  margin-bottom: 26px;
+}
+
+.hero-content > p:not(.eyebrow) {
+  max-width: 610px;
+  font-size: 1.05rem;
+  color: #c9bfb5;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 34px;
+}
+
+/* BUTTONS */
+
+.btn {
+  display: inline-block;
+  padding: 13px 25px;
+  border: 1px solid var(--color-gold);
+  border-radius: var(--radius);
+  background: var(--color-gold);
+  color: var(--color-black);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  text-align: center;
+  transition:
+    background var(--transition),
+    color var(--transition),
+    border-color var(--transition);
+}
+
+.btn:hover {
+  background: transparent;
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-beige);
+  border-color: var(--color-border);
+}
+
+.btn-outline:hover {
+  background: var(--color-brown);
+  color: var(--color-cream);
+  border-color: var(--color-gold);
+}
+
+/* GENERAL SECTIONS */
+
+.section {
+  padding: 90px 7%;
+}
+
+.section-heading {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.section-heading > p:not(.eyebrow) {
+  color: var(--color-text);
+}
+
+/* SERVICE AND CONTENT CARDS */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.card {
+  padding: 30px;
+  background: linear-gradient(
+    145deg,
+    #191411,
+    #100e0c
+  );
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  transition:
+    transform var(--transition),
+    border-color var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-gold);
+}
+
+.card h2,
+.card h3 {
+  color: var(--color-cream);
+}
+
+.card p {
+  color: var(--color-text);
+}
+
+.card a {
+  color: var(--color-gold);
+}
+
+.card ul {
+  padding-left: 20px;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+/* INNER PAGE HEADERS */
+
+.page-banner {
+  padding: 90px 7%;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    #211711,
+    #0a0a0a 75%
+  );
+  border-bottom: 1px solid var(--color-border);
+}
+
+.page-banner h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 18px;
+}
+
+.page-banner p:last-child {
+  margin-bottom: 0;
+}
+
+/* ABOUT PAGE */
+
+.about-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 48px;
+}
+
+.about-layout > div > p {
+  max-width: 650px;
+}
+
+/* PORTFOLIO */
+
+.project-visual {
+  min-height: 180px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 24px;
+  color: var(--color-gold);
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(
+    135deg,
+    #4a3023,
+    #17110e
+  );
+  border: 1px solid var(--color-border);
+}
+
+.visual-one {
+  background: linear-gradient(135deg, #503627, #17110e);
+}
+
+.visual-two {
+  background: linear-gradient(135deg, #30251e, #5a4433);
+}
+
+.visual-three {
+  background: linear-gradient(135deg, #241b17, #75553a);
+}
+
+.project-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid var(--color-border);
+  color: var(--color-beige);
+  font-size: 0.8rem;
+}
+
+/* CONTACT PAGE */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 48px;
+}
+
+.contact-detail {
+  margin-top: 28px;
+}
+
+.contact-form {
+  padding: 32px;
+  background: #13100e;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--color-beige);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  display: block;
+  width: 100%;
+  padding: 13px 14px;
+  background: #0a0a0a;
+  color: var(--color-cream);
+  border: 1px solid #403027;
+  border-radius: var(--radius);
+  font: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: 1px solid var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+.form-group select option {
+  background: var(--color-black);
+  color: var(--color-cream);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+#formStatus {
+  margin-top: 16px;
+  overflow-wrap: anywhere;
+}
+
+#formStatus:empty {
+  display: none;
+}
+
+#formStatus.success {
+  color: #b7d8ad;
+}
+
+#formStatus.error {
+  color: #e7a49a;
+}
+
+/* CALL TO ACTION */
+
+.cta {
+  padding: 85px 7%;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    #352319,
+    #17100c
+  );
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cta h2 {
+  color: var(--color-cream);
+}
+
+.cta p {
+  color: var(--color-text);
+  margin-bottom: 28px;
+}
+
+/* FOOTER */
+
+.site-footer {
+  padding: 30px 7%;
+  text-align: center;
+  background: #080808;
+  border-top: 1px solid var(--color-border);
+  color: #a99d91;
+  font-size: 0.85rem;
+}
+
+.site-footer p {
+  margin-bottom: 0;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 850px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .navbar {
+    gap: 12px 20px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-layout,
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero {
+    min-height: 500px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  .section {
+    padding: 60px 6%;
+  }
+
+  .page-banner {
+    padding: 65px 6%;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    gap: 10px 15px;
+  }
+
+  .navbar a {
+    font-size: 0.82rem;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+}
+
+/* NAVIGATION ICON PLACEMENT */
+
+.navbar a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar a i {
+  font-size: 0.9rem;
+  color: var(--color-gold);
+  transition: transform 0.3s ease;
+}
+
+.navbar a:hover i {
+  transform: translateY(-2px);
+}
+
+/* SERVICE ICONS */
+
+.service-icon {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  background: var(--color-brown);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+
+.service-icon i {
+  font-size: 1.45rem;
+  color: var(--color-gold);
+}
+
+.card a i {
+  margin-left: 6px;
+  font-size: 0.85rem;
+}
+
+/* CONTACT DETAILS */
+
+.contact-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.contact-icon {
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-brown);
+  border: 1px solid var(--color-border);
+  color: var(--color-gold);
+}
+
+.contact-detail h3 {
+  margin-bottom: 5px;
+}
+
+.contact-detail p {
+  margin-bottom: 0;
+}
+
+/* BUTTON ICON SPACING */
+
+.btn i {
+  margin-right: 8px;
+}
+
+/* FOOTER SOCIAL ICONS */
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.social-links a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  color: var(--color-gold);
+  transition: background 0.3s ease;
+}
+
+.social-links a:hover {
+  background: var(--color-brown);
+}
+
+/* AKAMAN WORKS — MOTION DESIGN */
+
+/* Hero text entrance */
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+    clip-path: inset(0 0 100% 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.hero .eyebrow {
+  animation: heroReveal 0.8s ease-out both;
+}
+
+.hero h1 {
+  animation: heroReveal 1s 0.12s ease-out both;
+}
+
+.hero-content > p:not(.eyebrow) {
+  animation: heroReveal 0.9s 0.28s ease-out both;
+}
+
+.hero-buttons {
+  animation: heroReveal 0.9s 0.42s ease-out both;
+}
+
+/* Gold accent line */
+.hero h1::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  margin-top: 24px;
+  background: var(--color-gold);
+  animation: lineReveal 0.8s 0.65s ease-out forwards;
+}
+
+@keyframes lineReveal {
+  to {
+    width: 90px;
+  }
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Service and portfolio hover effects */
+.card {
+  transition:
+    transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1),
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+.service-icon {
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+.card:hover .service-icon {
+  transform: translateY(-4px) rotate(-3deg);
+  background: #493024;
+}
+
+.project-visual {
+  overflow: hidden;
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+.project-card:hover .project-visual {
+  filter: brightness(1.15);
+  transform: scale(1.015);
+}
+
+/* Navigation underline */
+.navbar a {
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--color-gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+  transform: scaleX(1);
+}
+
+/* Accessible reduced-motion setting */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* ==========================================
+   AKAMAN WORKS — ALL-PAGES ANIMATION SYSTEM
+========================================== */
+
+/* Smooth entrance for inner page banners */
+.page-banner {
+  animation: bannerReveal 0.9s ease-out both;
+}
+
+.page-banner .eyebrow {
+  animation: fadeUp 0.7s 0.1s ease-out both;
+}
+
+.page-banner h1 {
+  animation: fadeUp 0.85s 0.2s ease-out both;
+}
+
+.page-banner p {
+  animation: fadeUp 0.85s 0.35s ease-out both;
+}
+
+/* Shared animation keyframes */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bannerReveal {
+  from {
+    opacity: 0;
+    background-position: 100% 50%;
+  }
+  to {
+    opacity: 1;
+    background-position: 0 50%;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animate all page sections when they enter view */
+.section,
+.cta,
+.site-footer {
+  animation: fadeIn 0.8s ease-out both;
+}
+
+/* About page */
+.about-layout > div:first-child {
+  animation: slideInLeft 0.8s 0.1s ease-out both;
+}
+
+.about-layout > div:last-child {
+  animation: slideInRight 0.8s 0.2s ease-out both;
+}
+
+/* Service, content and portfolio cards */
+.card-grid > .card {
+  animation: fadeUp 0.7s ease-out both;
+}
+
+.card-grid > .card:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.card-grid > .card:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+.card-grid > .card:nth-child(4) {
+  animation-delay: 0.36s;
+}
+
+.card-grid > .card:nth-child(5) {
+  animation-delay: 0.48s;
+}
+
+.card-grid > .card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* Portfolio visual details */
+.project-visual {
+  animation: fadeIn 0.9s ease-out both;
+}
+
+.project-card:hover .project-visual {
+  transform: scale(1.025);
+}
+
+/* Contact page */
+.contact-layout > div:first-child {
+  animation: slideInLeft 0.8s ease-out both;
+}
+
+.contact-layout > .contact-form,
+.contact-layout > form {
+  animation: slideInRight 0.8s 0.15s ease-out both;
+}
+
+/* Form controls respond smoothly to interaction */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  box-shadow: 0 0 0 3px rgba(200, 168, 124, 0.1);
+}
+
+/* Buttons and clickable cards */
+.btn {
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+}
+
+.card a,
+.social-links a,
+.navbar a,
+.logo {
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* CTA and footer */
+.cta h2,
+.cta p,
+.cta .btn {
+  animation: fadeUp 0.8s ease-out both;
+}
+
+.cta p {
+  animation-delay: 0.12s;
+}
+
+.cta .btn {
+  animation-delay: 0.24s;
+}
+
+.social-links a:hover {
+  transform: translateY(-4px);
+}
+
+/* Keep motion comfortable on smaller screens */
+@media (max-width: 560px) {
+  .about-layout > div:first-child,
+  .about-layout > div:last-child,
+  .contact-layout > div:first-child,
+  .contact-layout > .contact-form,
+  .contact-layout > form {
+    animation-name: fadeUp;
+  }
+}
+
+/* Respect accessibility preferences */
+@media (prefers-reduced-motion: reduce) {
+  .page-banner,
+  .page-banner *,
+  .section,
+  .cta,
+  .site-footer,
+  .about-layout > div,
+  .contact-layout > div,
+  .contact-layout > form,
+  .card-grid > .card,
+  .project-visual {
+    animation: none !important;
+  }
+}
+
